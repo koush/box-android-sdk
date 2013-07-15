@@ -30,7 +30,7 @@ public interface RenameListener extends ResponseListener {
     /** The filename contains invalid characters. */
     String STATUS_E_INVALID_FILE_NAME = "e_invalid_file_name";
 
-    /** The object name exceeds the number of characters it can have for it’s given type (100 for folders, 255 for files). */
+    /** The object name exceeds the number of characters it can have for it's given type (100 for folders, 255 for files). */
     String STATUS_E_FILENAME_TOO_BIG = "e_filename_too_big";
 
     /**  The target id either does not exist or is invalid. */
