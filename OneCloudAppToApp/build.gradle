@@ -11,7 +11,7 @@ apply plugin: 'android-library'
 apply plugin: 'maven'
 
 group = 'com.box.android'
-archivesBaseName = 'sdk';
+archivesBaseName = 'onecloud';
 version = '1.0.0'
 
 repositories {
@@ -39,9 +39,9 @@ uploadArchives {
 		}
 
 		pom.project {
-			name 'Box Android SDK v1'
+			name 'Android OneCloud'
 			packaging 'aar'
-			description 'Android SDK for Box v1'
+			description 'Android OneCloud library'
 			url 'https://github.com/box/box-android-sdk'
 
 			scm {
@@ -69,12 +69,6 @@ uploadArchives {
 	}
 }
 
-dependencies {
-	compile 'org.apache.httpcomponents:httpmime:4.2.5'
-	compile 'org.apache.james:apache-mime4j:0.7.2'
-	compile files('libs/gson-renamed-2.2.2.jar')
-}
-
 android {
 	sourceSets {
 		main {
@@ -82,6 +76,7 @@ android {
 			java.srcDirs = ['src']
 			resources.srcDirs = ['src']
 			res.srcDirs = ['res']
+			aidl.srcDirs = ['src']
 		}
 	}
 	buildToolsVersion "18.0.1"
